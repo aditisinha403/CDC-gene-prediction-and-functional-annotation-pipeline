@@ -14,7 +14,10 @@ This workflow operates downstream of **Group 1 (Read Cleaning & Genome Assembly)
 
 ## Input
 
-- Assembled bacterial genome FASTA file (.fna) provided by Group 1
+| Category | Description |
+|----------|------------|
+| Genome Assembly | Assembled bacterial genome FASTA file (.fna) |
+| Source | Group 1 – Read Cleaning & Genome Assembly |
 
 ---
 
