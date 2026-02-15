@@ -29,20 +29,17 @@ This workflow operates downstream of **Group 1 (Read Cleaning & Genome Assembly)
 | 16S rRNA Sequences | Extracted 16S gene sequences in FASTA format |
 | Species Identification | Top 5 BLASTn alignments against curated 16S database |
 
-## Output
-
-- Coding sequence (CDS) annotations (GFF format)
-- CDS prediction log file
-- Extracted 16S rRNA sequences (FASTA)
-- 16S BLAST alignment summary
 
 ---
 
-## Tools (Planned)
+## Tools
 
-- Prodigal – CDS prediction
-- barrnap – rRNA detection
-- BLASTn – species-level identification
+| Tool | Function | Method Type | Rationale |
+|------|----------|-------------|-----------|
+| **Prodigal** | Predict coding sequences (CDS) | Ab initio gene prediction | Optimized for prokaryotic genomes; fast and accurate |
+| **barrnap** | Detect ribosomal RNA genes | rRNA feature detection | Rapid identification of 16S, 23S, and 5S rRNA operons |
+| **BLASTn** | Species-level identification via 16S | Sequence homology alignment | Compares extracted 16S sequences against curated rRNA database |
+
 
 ---
 
