@@ -14,16 +14,15 @@ This workflow operates downstream of **Group 1 (Read Cleaning & Genome Assembly)
 
 ## Input
 
-| Category | Description |
-|----------|------------|
-| Genome Assembly | Assembled bacterial genome FASTA file (.fna) |
-| Source | Group 1 – Read Cleaning & Genome Assembly |
+| Input File | Source |
+|------------|--------|
+| Assembled bacterial genome (.fna) | Group 1 – Read Cleaning & Genome Assembly |
 
 ---
 
 ## Output
 
-| Category | Description |
+| Output Type | File Content |
 |----------|------------|
 | CDS Annotation | Coding sequence predictions in GFF format |
 | CDS Log File | Combined stdout and stderr execution log |
