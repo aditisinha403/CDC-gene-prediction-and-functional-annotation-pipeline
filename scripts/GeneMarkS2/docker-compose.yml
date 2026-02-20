@@ -1,0 +1,62 @@
+# =============================================================================
+# docker-compose.yml — GeneMarkS-2 gene prediction service
+#
+# Usage:
+#   cd scripts/GeneMarkS2
+#
+#   # Run on sample 1:
+#   SAMPLE=Bea3b88bb9 docker compose up gms2
+#
+#   # Run on sample 2:
+#   SAMPLE=Bfe6f82f31 docker compose up gms2
+#
+#   # Enter container to explore/debug:
+#   docker compose run --entrypoint bash gms2
+#
+#   # View logs of a previous run:
+#   docker compose logs gms2
+#
+#   # Clean up stopped containers:
+#   docker compose down
+# =============================================================================
+
+services:
+  gms2:
+    # Image must be pre-built. See README.md for build instructions:
+    #   docker build --platform linux/amd64 -t genemarks2:1.15 /path/to/gms2_linux_64/
+    image: genemarks2:1.15
+    platform: linux/amd64
+    container_name: gms2_runner
+
+    # No "rm" — container persists after exit for inspection
+    # Use "docker compose down" to clean up when done
+
+    volumes:
+      # License key (read-only)
+      - ~/.gmhmmp2_key:/root/.gmhmmp2_key:ro
+      # Input data (read-only)
+      - ../../Data/GeneMarkS2:/data:ro
+      # Output directory (writable)
+      - ../../results/GeneMarkS2:/output
+
+    working_dir: /output
+
+    # Default: run GeneMarkS-2 on the sample specified by $SAMPLE
+    # Override SAMPLE env var to switch between samples
+    environment:
+      - SAMPLE=${SAMPLE:-Bea3b88bb9}
+
+    entrypoint: ["perl", "/opt/gms2/gms2.pl"]
+    command:
+      - --seq
+      - /data/${SAMPLE:-Bea3b88bb9}_S01_L001_filtered.fasta
+      - --genome-type
+      - bacteria
+      - --output
+      - /output/${SAMPLE:-Bea3b88bb9}_gms2.gff
+      - --format
+      - gff
+      - --faa
+      - /output/${SAMPLE:-Bea3b88bb9}_gms2.faa
+      - --fnn
+      - /output/${SAMPLE:-Bea3b88bb9}_gms2.fnn
