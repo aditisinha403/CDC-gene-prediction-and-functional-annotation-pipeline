@@ -238,4 +238,4 @@ Pipeline expansion in progress (Prodigal, DIAMOND, Prokka).
 
 - Zahra
 - Aditi
-- Franshi
+- Fanshi
