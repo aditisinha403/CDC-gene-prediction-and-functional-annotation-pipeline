@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# GeneMarkS-2 temp files
+*.mod
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor
+*.swp
+*.swo
+*~
