@@ -168,4 +168,4 @@ Pipeline expansion in progress (Prodigal, DIAMOND, Prokka, eggNOG-mapper).
 
 - Zahra
 - Aditi
-- Franshi
+- Fanshi
