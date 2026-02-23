@@ -182,31 +182,38 @@ bash scripts/eggNOG-mapper/run_eggnog.sh stats
 
 ## Directory Structure
 
-```
-├── Data/GeneMarkS2/                Input FASTA assemblies (2 samples)
+```text
+├── preliminary_results_commands.sh      Master pipeline script (Prodigal, GLIMMER, Barrnap, RNAmmer)
+├── data/
+│   ├── *.fasta                          Input assemblies (2 samples)
+│   ├── *_proteins.faa                   Translated protein sequences (from Prodigal)
+│   ├── *_subset_clean.faa               Subset of clean sequences formatted for Web GUIs
+│   └── GeneMarkS2/                      GeneMark-specific input formatting
 ├── scripts/
 │   ├── GeneMarkS2/
-│   │   ├── Dockerfile              Image definition (needs binaries to build)
-│   │   ├── docker-compose.yml      Container orchestration config
-│   │   └── gms2_commands.sh        Main run script (both samples)
+│   │   ├── Dockerfile                   Image definition
+│   │   ├── docker-compose.yml           Container orchestration config
+│   │   └── gms2_commands.sh             Main run script for GeneMark
 │   └── eggNOG-mapper/
-│       ├── run_eggnog.sh           Run script (download/annotate/stats)
-│       └── eggnog_commands.sh      Commands record for reproducibility
+│       ├── run_eggnog.sh                Run script (download/annotate/stats)
+│       └── eggnog_commands.sh           Commands record for reproducibility
 ├── results/
+│   ├── *_prodigal.gff                   Prodigal coordinate maps
+│   ├── *_glimmer.predict                GLIMMER gene predictions
+│   ├── *_barrnap.gff                    Barrnap rRNA coordinates
+│   ├── *_rnammer.gff                    RNAmmer rRNA coordinates
 │   ├── GeneMarkS2/
-│   │   ├── {sample}_gms2.gff.gz   Gene predictions (GFF, compressed)
-│   │   ├── {sample}_gms2.faa      Protein sequences
-│   │   ├── {sample}_gms2.fnn.gz   Nucleotide sequences (compressed)
-│   │   └── gms2_summary.tsv       Comparison table
+│   │   ├── {sample}_gms2.gff.gz         Gene predictions (GFF, compressed)
+│   │   └── gms2_summary.tsv             GeneMark comparison table
 │   └── eggNOG-mapper/
 │       ├── {sample}_eggnog.emapper.annotations  Main annotation table (TSV)
-│       ├── {sample}_eggnog.emapper.hits          DIAMOND alignment hits
-│       └── {sample}_eggnog.emapper.seed_orthologs Ortholog mappings
+│       └── {sample}_eggnog.emapper.hits         DIAMOND alignment hits
 └── logs/
+    ├── *.log                            Execution logs for native tools (includes runtime metrics)
     ├── GeneMarkS2/
-    │   └── {sample}_gms2_log.txt   Run logs with timestamps
+    │   └── {sample}_gms2_log.txt        Docker run logs with timestamps
     └── eggNOG-mapper/
-        └── {sample}_eggnog.log     Run log + resource usage (time/RSS)
+        └── {sample}_eggnog.log          Run log + resource usage (time/RSS)
 ```
 
 ## Output Naming Convention
