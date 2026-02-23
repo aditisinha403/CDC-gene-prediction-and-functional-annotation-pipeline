@@ -59,24 +59,23 @@ This workflow operates downstream of **Group 1 (Read Cleaning & Genome Assembly)
 ## Tools
 
 ### Gene Prediction (ab initio)
-
 | Tool | Version | Method Type | Rationale |
 |------|---------|-------------|-----------|
-| **GeneMarkS-2** | 1.15_1.25_lic | Ab initio (self-training HMM) | Requires [license](https://exon.gatech.edu/GeneMark/license_download.cgi). Runs via Docker (`--platform linux/amd64`). |
-| **Prodigal** | TBD | Ab initio gene prediction | Optimized for prokaryotic genomes; fast and accurate |
+| **Prodigal** | 2.6.3 | Dynamic Programming | Primary pipeline tool. Selected for its rapid execution speed natively on Ubuntu and its conservative coding density boundaries. Natively outputs required translated `.faa` files. |
+| **GeneMarkS-2** | 1.15_1.25_lic | Hidden Markov Model (HMM) | Selected for its self-training capability (`--ES`). Evaluated against Prodigal, but required Docker containerization via Rosetta, adding infrastructure overhead. |
+| **GLIMMER** | 3.02 | Interpolated Markov Model | Evaluated for comparison. Demonstrated high sensitivity but was observed to over-predict short, overlapping ORFs. |
 
-### Gene Prediction (homology-based)
-
-| Tool | Version | Method Type | Rationale |
-|------|---------|-------------|-----------|
-| **DIAMOND + SwissProt** | TBD | Homology-based | TBD |
-
-### Functional Annotation
-
+### Structural Annotation (rRNA)
 | Tool | Version | Rationale |
 |------|---------|-----------|
-| **Prokka** | TBD | TBD |
-| **eggNOG-mapper** | 2.1.12 (emapper-2.1.12) | Orthology-based functional annotation using eggNOG v5.0.2 database with DIAMOND search. Provides COG, KEGG, GO, and Pfam annotations. Docker image: `quay.io/biocontainers/eggnog-mapper:2.1.12--pyhdfd78af_0` |
+| **Barrnap** | 0.9 | Rapid, heuristic identification of 16S, 23S, and 5S rRNA operons using HMMER 3.1. Successfully flagged assembly artifacts (e.g., partial 23S genes). |
+| **RNAmmer** | 1.2 | Legacy baseline comparison using strict HMMER 2 models. |
+
+### Functional Annotation
+| Tool | Version | Rationale |
+|------|---------|-----------|
+| **eggNOG-mapper** | 2.1.12 | Orthology-based functional annotation to identify broad evolutionary pathways (COGs, KEGG). |
+| **InterProScan** | Web GUI | Complementary domain-level structural annotation using predictive mathematical profiles (e.g., Pfam). |
 
 ### Other
 
@@ -168,10 +167,13 @@ Species-level identification in this project is performed using 16S rRNA BLASTn 
 ## Quick Start
 
 ```bash
-# Run GeneMarkS-2 on both samples
+# 1. Run the native Ubuntu master pipeline (Prodigal, GLIMMER, Barrnap, RNAmmer)
+bash preliminary_results_commands.sh
+
+# 2. Run GeneMarkS-2 on both samples (Requires Docker/Rosetta)
 bash scripts/GeneMarkS2/gms2_commands.sh
 
-# Run eggNOG-mapper annotation on both samples
+# 3. Run eggNOG-mapper annotation on both samples (Requires Docker volume)
 bash scripts/eggNOG-mapper/run_eggnog.sh annotate
 bash scripts/eggNOG-mapper/run_eggnog.sh stats
 ```
@@ -227,10 +229,9 @@ Example: `Bea3b88bb9_gms2.gff.gz`
 ---
 
 ## Status
-
-GeneMarkS-2 gene prediction completed for both samples.
-eggNOG-mapper functional annotation completed for both samples.
-Pipeline expansion in progress (Prodigal, DIAMOND, Prokka).
+- **Phase 1 (rRNA Prediction):** Completed. Barrnap and RNAmmer evaluated.
+- **Phase 2 (CDS Prediction):** Completed. Prodigal, GLIMMER, and GeneMarkS-2 evaluated. Prodigal selected as the primary sequence generator.
+- **Phase 3 (Functional Annotation):** Completed. Top Prodigal sequences analyzed via eggNOG-mapper and InterProScan web interfaces.
 
 ---
 
