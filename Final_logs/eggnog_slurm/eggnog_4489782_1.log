@@ -1,0 +1,38 @@
+---------------------------------------
+Begin Slurm Prolog: Mar-17-2026 13:21:03
+Job ID:    4489788
+User ID:   fmeng48
+Account:   bios
+Job name:  eggnog_array
+Partition: coc-cpu
+QOS:       coc-ice
+---------------------------------------
+Lmod Warning:
+-------------------------------------------------------------------------------
+The following dependent module(s) are not currently loaded: zlib/1.2.13
+(required by: gcc/12.3.0)
+-------------------------------------------------------------------------------
+
+
+
+
+The following have been reloaded with a version change:
+  1) zlib/1.2.13 => zlib/1.2.13-3qhjpij
+
+[2026-03-17 13:21:08] INFO: Array task 1: processing sample B241d969ef
+[2026-03-17 13:21:08] INFO: Running eggNOG-mapper on B241d969ef...
+[2026-03-17 15:46:57] INFO: B241d969ef: eggNOG annotated 1708 proteins
+[2026-03-17 15:46:57] INFO: Array task 1: B241d969ef complete
+---------------------------------------
+Begin Slurm Epilog: Mar-17-2026 15:46:57
+Job ID:        4489788
+Array Job ID:  4489782_1
+User ID:       fmeng48
+Account:       bios
+Job name:      eggnog_array
+Resources:     cpu=8,mem=12G,node=1
+Rsrc Used:     cput=19:27:20,vmem=0,walltime=02:25:55,mem=12586908K,energy_used=0
+Partition:     coc-cpu
+QOS:           coc-ice
+Nodes:         atl1-1-03-003-16-1
+---------------------------------------

@@ -1,0 +1,28 @@
+[1;32mFunctional annotation of hits...[0m
+500 534.1421501636505 0.94 q/s (% mem usage: 3.20, % mem avail: 96.84)
+1000 849.5103757381439 1.18 q/s (% mem usage: 3.00, % mem avail: 96.98)
+1500 1012.7069251537323 1.48 q/s (% mem usage: 3.10, % mem avail: 96.95)
+1650 1026.9273931980133 1.61 q/s (% mem usage: 2.90, % mem avail: 97.07)
+	Command being timed: "emapper.py -i /home/hice1/fmeng48/scratch/BIOL7210/sentinel_Group2/results/predictions/gms2/Be087298df_gms2.faa -o /home/hice1/fmeng48/scratch/BIOL7210/sentinel_Group2/results/annotations/eggnog/Be087298df_eggnog --data_dir /home/hice1/fmeng48/scratch/BIOL7210/databases/eggnog -m diamond --cpu 8 --tax_scope Bacteria --go_evidence non-electronic --override --temp_dir /tmp/eggnog_fmeng48_Be087298df --scratch_dir /tmp/eggnog_fmeng48_Be087298df"
+	User time (seconds): 58827.05
+	System time (seconds): 593.15
+	Percent of CPU this job got: 671%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:27:30
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 9422848
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 971
+	Minor (reclaiming a frame) page faults: 13291265
+	Voluntary context switches: 15015417
+	Involuntary context switches: 784525
+	Swaps: 0
+	File system inputs: 35596560
+	File system outputs: 20160
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
