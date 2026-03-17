@@ -1,0 +1,133 @@
+-------------------------------------
+PRODIGAL v2.6.3 [February, 2016]         
+Univ of Tenn / Oak Ridge National Lab
+Doug Hyatt, Loren Hauser, et al.     
+-------------------------------------
+Request:  Single Genome, Phase:  Training
+Reading in the sequence(s) to train...1893482 bp seq created, 51.79 pct GC
+Locating all potential starts and stops...116206 nodes
+Looking for GC bias in different frames...frame bias scores: 0.87 0.17 1.96
+Building initial set of genes to train from...done!
+Creating coding model and scoring nodes...done!
+Examining upstream regions and training starts...done!
+-------------------------------------
+Request:  Single Genome, Phase:  Gene Finding
+Finding genes in sequence #1 (88127 bp)...done!
+Finding genes in sequence #2 (78953 bp)...done!
+Finding genes in sequence #3 (71541 bp)...done!
+Finding genes in sequence #4 (55903 bp)...done!
+Finding genes in sequence #5 (51346 bp)...done!
+Finding genes in sequence #6 (49667 bp)...done!
+Finding genes in sequence #7 (49285 bp)...done!
+Finding genes in sequence #8 (48801 bp)...done!
+Finding genes in sequence #9 (46364 bp)...done!
+Finding genes in sequence #10 (45566 bp)...done!
+Finding genes in sequence #11 (44312 bp)...done!
+Finding genes in sequence #12 (43538 bp)...done!
+Finding genes in sequence #13 (40645 bp)...done!
+Finding genes in sequence #14 (40409 bp)...done!
+Finding genes in sequence #15 (39912 bp)...done!
+Finding genes in sequence #16 (39894 bp)...done!
+Finding genes in sequence #17 (39713 bp)...done!
+Finding genes in sequence #18 (38270 bp)...done!
+Finding genes in sequence #19 (35849 bp)...done!
+Finding genes in sequence #20 (34496 bp)...done!
+Finding genes in sequence #21 (34483 bp)...done!
+Finding genes in sequence #22 (33594 bp)...done!
+Finding genes in sequence #23 (32152 bp)...done!
+Finding genes in sequence #24 (30953 bp)...done!
+Finding genes in sequence #25 (27157 bp)...done!
+Finding genes in sequence #26 (26298 bp)...done!
+Finding genes in sequence #27 (25809 bp)...done!
+Finding genes in sequence #28 (24570 bp)...done!
+Finding genes in sequence #29 (22682 bp)...done!
+Finding genes in sequence #30 (22089 bp)...done!
+Finding genes in sequence #31 (21995 bp)...done!
+Finding genes in sequence #32 (21795 bp)...done!
+Finding genes in sequence #33 (20167 bp)...done!
+Finding genes in sequence #34 (19324 bp)...done!
+Finding genes in sequence #35 (18859 bp)...done!
+Finding genes in sequence #36 (18542 bp)...done!
+Finding genes in sequence #37 (18184 bp)...done!
+Finding genes in sequence #38 (17482 bp)...done!
+Finding genes in sequence #39 (16946 bp)...done!
+Finding genes in sequence #40 (16692 bp)...done!
+Finding genes in sequence #41 (16485 bp)...done!
+Finding genes in sequence #42 (15659 bp)...done!
+Finding genes in sequence #43 (15241 bp)...done!
+Finding genes in sequence #44 (14966 bp)...done!
+Finding genes in sequence #45 (14746 bp)...done!
+Finding genes in sequence #46 (14478 bp)...done!
+Finding genes in sequence #47 (14066 bp)...done!
+Finding genes in sequence #48 (13881 bp)...done!
+Finding genes in sequence #49 (13097 bp)...done!
+Finding genes in sequence #50 (12988 bp)...done!
+Finding genes in sequence #51 (12772 bp)...done!
+Finding genes in sequence #52 (12766 bp)...done!
+Finding genes in sequence #53 (12115 bp)...done!
+Finding genes in sequence #54 (11361 bp)...done!
+Finding genes in sequence #55 (11076 bp)...done!
+Finding genes in sequence #56 (10635 bp)...done!
+Finding genes in sequence #57 (9922 bp)...done!
+Finding genes in sequence #58 (9745 bp)...done!
+Finding genes in sequence #59 (9362 bp)...done!
+Finding genes in sequence #60 (7879 bp)...done!
+Finding genes in sequence #61 (7793 bp)...done!
+Finding genes in sequence #62 (7536 bp)...done!
+Finding genes in sequence #63 (6877 bp)...done!
+Finding genes in sequence #64 (6684 bp)...done!
+Finding genes in sequence #65 (6397 bp)...done!
+Finding genes in sequence #66 (6352 bp)...done!
+Finding genes in sequence #67 (6246 bp)...done!
+Finding genes in sequence #68 (6114 bp)...done!
+Finding genes in sequence #69 (6033 bp)...done!
+Finding genes in sequence #70 (5954 bp)...done!
+Finding genes in sequence #71 (5675 bp)...done!
+Finding genes in sequence #72 (5591 bp)...done!
+Finding genes in sequence #73 (5452 bp)...done!
+Finding genes in sequence #74 (5438 bp)...done!
+Finding genes in sequence #75 (5163 bp)...done!
+Finding genes in sequence #76 (4717 bp)...done!
+Finding genes in sequence #77 (4704 bp)...done!
+Finding genes in sequence #78 (4628 bp)...done!
+Finding genes in sequence #79 (4292 bp)...done!
+Finding genes in sequence #80 (3991 bp)...done!
+Finding genes in sequence #81 (3963 bp)...done!
+Finding genes in sequence #82 (3927 bp)...done!
+Finding genes in sequence #83 (3865 bp)...done!
+Finding genes in sequence #84 (3584 bp)...done!
+Finding genes in sequence #85 (3354 bp)...done!
+Finding genes in sequence #86 (3053 bp)...done!
+Finding genes in sequence #87 (2950 bp)...done!
+Finding genes in sequence #88 (2818 bp)...done!
+Finding genes in sequence #89 (2727 bp)...done!
+Finding genes in sequence #90 (2557 bp)...done!
+Finding genes in sequence #91 (2530 bp)...done!
+Finding genes in sequence #92 (2436 bp)...done!
+Finding genes in sequence #93 (2391 bp)...done!
+Finding genes in sequence #94 (2305 bp)...done!
+Finding genes in sequence #95 (2105 bp)...done!
+Finding genes in sequence #96 (1912 bp)...done!
+Finding genes in sequence #97 (1889 bp)...done!
+Finding genes in sequence #98 (1722 bp)...done!
+Finding genes in sequence #99 (1617 bp)...done!
+Finding genes in sequence #100 (1575 bp)...done!
+Finding genes in sequence #101 (1479 bp)...done!
+Finding genes in sequence #102 (1465 bp)...done!
+Finding genes in sequence #103 (1426 bp)...done!
+Finding genes in sequence #104 (1265 bp)...done!
+Finding genes in sequence #105 (1246 bp)...done!
+Finding genes in sequence #106 (1082 bp)...done!
+Finding genes in sequence #107 (1078 bp)...done!
+Finding genes in sequence #108 (1043 bp)...done!
+Finding genes in sequence #109 (940 bp)...done!
+Finding genes in sequence #110 (848 bp)...done!
+Finding genes in sequence #111 (811 bp)...done!
+Finding genes in sequence #112 (701 bp)...done!
+Finding genes in sequence #113 (691 bp)...done!
+Finding genes in sequence #114 (653 bp)...done!
+Finding genes in sequence #115 (603 bp)...done!
+Finding genes in sequence #116 (597 bp)...done!
+Finding genes in sequence #117 (574 bp)...done!
+Finding genes in sequence #118 (520 bp)...done!
+Finding genes in sequence #119 (511 bp)...done!
