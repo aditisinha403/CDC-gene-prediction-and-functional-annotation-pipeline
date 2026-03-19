@@ -1,0 +1,4 @@
+##gff-version 3
+contigs_69	barrnap:0.9	rRNA	470	578	3.3e-08	-	.	Name=5S_rRNA;product=5S ribosomal RNA
+contigs_69	barrnap:0.9	rRNA	678	3566	0	-	.	Name=23S_rRNA;product=23S ribosomal RNA
+contigs_69	barrnap:0.9	rRNA	4236	5771	0	-	.	Name=16S_rRNA;product=16S ribosomal RNA
