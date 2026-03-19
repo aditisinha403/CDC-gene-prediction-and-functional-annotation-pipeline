@@ -52,17 +52,6 @@ Both tools were used to detect:
 - Each genome contains **one complete rRNA operon (16S–23S–5S)**
 - This is the expected structure for bacterial genomes
 
----
-
-### Tool Comparison
-
-| Metric | Barrnap | RNAmmer |
-|------|--------|--------|
-| Genomes analyzed | 34 | 34 |
-| 16S detection | 34/34 | 34/34 |
-| 23S detection | 34/34 | 34/34 |
-| 5S detection | 34/34 | 34/34 |
-| Avg runtime | ~0.93 s | ~37 s |
 
 ---
 
