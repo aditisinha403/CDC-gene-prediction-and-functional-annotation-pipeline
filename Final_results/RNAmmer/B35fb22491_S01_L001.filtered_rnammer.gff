@@ -1,0 +1,10 @@
+##gff-version2
+##source-version RNAmmer-1.2
+##date 2026-03-18
+##Type DNA
+# seqname           source                      feature     start      end   score   +/-  frame  attribute
+# ---------------------------------------------------------------------------------------------------------
+contigs_71	RNAmmer-1.2	rRNA	265	1793	1897.8	+	.	16s_rRNA	
+contigs_71	RNAmmer-1.2	rRNA	5456	5568	91.0	+	.	5s_rRNA	
+contigs_71	RNAmmer-1.2	rRNA	2468	5357	3542.8	+	.	23s_rRNA	
+# ---------------------------------------------------------------------------------------------------------
