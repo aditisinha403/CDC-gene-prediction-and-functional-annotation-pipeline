@@ -1,1 +1,0 @@
-Barrnap logs folder

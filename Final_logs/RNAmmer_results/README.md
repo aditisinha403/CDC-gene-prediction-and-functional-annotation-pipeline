@@ -1,1 +1,0 @@
-RNAmmer logs are here
