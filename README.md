@@ -1,6 +1,6 @@
 # B2
 # GenePred-Annot (GPA)
-**Group B2 – Gene Prediction & Functional Annotation**  
+**Gene Prediction & Functional Annotation**  
 
 ---
 
@@ -8,7 +8,7 @@
 
 GenePred-Annot (GPA) is a reproducible annotation pipeline designed to perform structural gene prediction and ribosomal RNA identification on bacterial genome assemblies.
 
-This workflow operates downstream of **Group 1 (Read Cleaning & Genome Assembly)** and transforms assembled genomes into biologically interpretable annotations.
+This workflow operates downstream of **(Read Cleaning & Genome Assembly)** and transforms assembled genomes into biologically interpretable annotations.
 
 ---
 
@@ -16,7 +16,7 @@ This workflow operates downstream of **Group 1 (Read Cleaning & Genome Assembly)
 
 | Input File | Source |
 |------------|--------|
-| Assembled bacterial genome (.fna) | Group 1 – Read Cleaning & Genome Assembly |
+| Assembled bacterial genome (.fna) | Read Cleaning & Genome Assembly |
 
 ---
 
@@ -197,23 +197,17 @@ bash scripts/eggNOG-mapper/run_eggnog.sh stats
 │   └── eggNOG-mapper/
 │       ├── run_eggnog.sh                Run script (download/annotate/stats)
 │       └── eggnog_commands.sh           Commands record for reproducibility
-├── results/
-│   ├── *_prodigal.gff                   Prodigal coordinate maps
-│   ├── *_glimmer.predict                GLIMMER gene predictions
-│   ├── *_barrnap.gff                    Barrnap rRNA coordinates
-│   ├── *_rnammer.gff                    RNAmmer rRNA coordinates
-│   ├── GeneMarkS2/
-│   │   ├── {sample}_gms2.gff.gz         Gene predictions (GFF, compressed)
-│   │   └── gms2_summary.tsv             GeneMark comparison table
-│   └── eggNOG-mapper/
-│       ├── {sample}_eggnog.emapper.annotations  Main annotation table (TSV)
-│       └── {sample}_eggnog.emapper.hits         DIAMOND alignment hits
-└── logs/
-    ├── *.log                            Execution logs for native tools (includes runtime metrics)
+└── results/
+    ├── *_prodigal.gff                   Prodigal coordinate maps
+    ├── *_glimmer.predict                GLIMMER gene predictions
+    ├── *_barrnap.gff                    Barrnap rRNA coordinates
+    ├── *_rnammer.gff                    RNAmmer rRNA coordinates
     ├── GeneMarkS2/
-    │   └── {sample}_gms2_log.txt        Docker run logs with timestamps
+    │   ├── {sample}_gms2.gff.gz         Gene predictions (GFF, compressed)
+    │   └── gms2_summary.tsv             GeneMark comparison table
     └── eggNOG-mapper/
-        └── {sample}_eggnog.log          Run log + resource usage (time/RSS)
+        ├── {sample}_eggnog.emapper.annotations  Main annotation table (TSV)
+        └── {sample}_eggnog.emapper.hits         DIAMOND alignment hits
 ```
 
 ## Output Naming Convention
