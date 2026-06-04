@@ -100,7 +100,7 @@ InterProScan was used to annotate predicted proteins.
 
 ## 4. Taxonomic Identification (16S BLAST)
 
-16S rRNA sequences were extracted and aligned using BLAST.
+16S rRNA sequences were extracted and aligned using BLAST
 
 ### Result
 
